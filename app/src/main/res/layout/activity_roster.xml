@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListViewActivity" >
+
+    <Button
+        android:id="@+id/records_addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="New record"
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:onClick="onNewRecordButtonClick"/>
+
+    <ListView
+        android:id="@+id/records_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/record_item"
+        android:layout_below="@+id/records_addButton" >
+
+    </ListView>
+
+
+</RelativeLayout>

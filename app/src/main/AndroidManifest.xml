@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.ivan2kh.com.wifisrecords">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".RosterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewRecordActivity"
+            android:label="@string/title_activity_new_record">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RosterActivity" />
+        </activity>
+        <service
+            android:name=".BackgroundService"
+            android:exported="false"/>
+        <receiver android:name=".WifiScanReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.wifi.SCAN_RESULTS" />
+                <action android:name="android.net.wifi.WifiManager.SCAN_RESULTS_AVAILABLE_ACTION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="BeepReceiver"></receiver>
+    </application>
+
+</manifest>

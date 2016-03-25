@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Wifis Records</string>
+    <string name="title_activity_new_record">NewRecordActivity</string>
+    <string name="file_name">file_name</string>
+    <string name="scans_per_browadcast">scans_per_browadcast</string>
+    <string name="beep_id">beep_id</string>
+</resources>
